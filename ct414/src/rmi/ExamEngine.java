@@ -24,6 +24,7 @@ public class ExamEngine implements ExamServer {
 		Students.add(new Student(000, "hunter2"));
 		Students.add(new Student(001, "hunter2"));
 		Students.add(new Student(002, "hunter2"));
+		System.out.println("Students initialized");
 	}
 
 	// Implement the methods defined in the ExamServer interface...
@@ -89,9 +90,10 @@ public class ExamEngine implements ExamServer {
 	}
 
 	public static void main(String[] args) {
-		if (System.getSecurityManager() == null) {
+		//removed security manager to test
+		/*if (System.getSecurityManager() == null) {
 			System.setSecurityManager(new SecurityManager());
-		}
+		}*/
 		try {
 			String name = "ExamServer";
 			ExamServer engine = new ExamEngine();
